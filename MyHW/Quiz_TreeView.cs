@@ -18,35 +18,11 @@ namespace MyHW
         {
             InitializeComponent();
             LoadDataToYTreeView();
-            LoadDataToDateGridView();
+            
 
         }
 
-        private void LoadDataToDateGridView()
-        {
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(Settings.Default.NorthwindConnectionString))
-                {
-                    conn.Open();
-                    SqlCommand command = new SqlCommand();
-                    command.CommandText = $"select * from Customers where city ='{this.treeView1.Text}'";
-                    command.Connection = conn;
-
-                    SqlDataReader dataReader = command.ExecuteReader();
-
-                    this.dataGridView1.DataSource = dataReader.Read();
-                    while (dataReader.Read())
-                    {
-
-                    }
-                } // Auto conn.Close()
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
+        
 
         private void LoadDataToYTreeView()
         {
@@ -66,8 +42,9 @@ namespace MyHW
                     while (dataReader.Read())
                     {
                         string Country = dataReader["Country"].ToString();
+                        string count = dataReader["count"].ToString();
                         TreeNode treeNode_1 = new TreeNode();
-                        treeNode_1.Text = Country;
+                        treeNode_1.Text = Country+"("+count+")";
                         treeView1.Nodes.Add(treeNode_1);
 
                         using (SqlConnection conn1 = new SqlConnection(Settings.Default.NorthwindConnection))

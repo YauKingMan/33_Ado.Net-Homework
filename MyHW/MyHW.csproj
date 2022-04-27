@@ -48,7 +48,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -119,6 +121,12 @@
     </Compile>
     <Compile Include="7. FrmCustomers.Designer.cs">
       <DependentUpon>7. FrmCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ShowImage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ShowImage.Designer.cs">
+      <DependentUpon>Form_ShowImage.cs</DependentUpon>
     </Compile>
     <Compile Include="NW_DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
