@@ -17,7 +17,7 @@ namespace MyHW
         int i = 0;
         Form_ShowImage frm_ShowImage = null;
         PictureBox picturebox = null;
-        
+        string cityname = "";
 
         public FrmMyAlbum_V1()
         {
