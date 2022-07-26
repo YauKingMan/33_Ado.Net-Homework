@@ -22,7 +22,7 @@ namespace MyHW
             if (System.Environment.OSVersion.Version.Major >= 6) { SetProcessDPIAware(); }
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmLogon());
+            Application.Run(new LoadDataToYTreeView());
             
         }
     }
